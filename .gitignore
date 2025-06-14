@@ -1,0 +1,35 @@
+# Bỏ qua thư mục cấu hình cá nhân của Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+
+# IIS Express
+.vscode/
+*.vspscc
+*.vssscc
+
+# Logs
+*.log
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Tệp môi trường
+appsettings.Development.json
+
+# Các file tạm thời
+*.tmp
+*.temp
+*.bak
+
+# Thư mục publish
+publish/

@@ -1,0 +1,96 @@
+﻿namespace Project01.wwwroot.assets.css
+{
+    public class custom
+    {
+        /* Định dạng lại bảng giỏ hàng */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td
+    {
+        padding: 12px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+.table th
+    {
+        background-color: #f2f2f2;
+    color: #333;
+}
+
+.table td
+    {
+        background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+    /* Cải thiện kiểu input số lượng */
+    input[type = "number"] {
+    text-align: center;
+    width: 80px;
+}
+
+/* Nút cập nhật giỏ hàng */
+.updatecartitem {
+    margin-top: 5px;
+padding: 5px 10px;
+font - size: 14px;
+background - color: #28a745;
+    color: white;
+border: none;
+border - radius: 3px;
+cursor: pointer;
+}
+
+.updatecartitem: hover {
+    background - color: #218838;
+}
+
+/* Nút xóa giỏ hàng */
+a.btn - danger {
+    margin - top: 5px;
+padding: 5px 10px;
+    font - size: 14px;
+    background - color: #dc3545;
+    color: white;
+border: none;
+    border - radius: 3px;
+    text - decoration: none;
+}
+
+a.btn - danger:hover {
+    background-color: #c82333;
+}
+
+/* Thêm khoảng cách giữa tổng tiền và nút gửi đơn hàng */
+tr td.text - right {
+    font - weight: bold;
+    font - size: 16px;
+}
+
+.btn - primary {
+    margin - top: 20px;
+padding: 10px 20px;
+    background - color: #007bff;
+    color: white;
+border: none;
+    border - radius: 5px;
+}
+
+.btn - primary:hover {
+    background-color: #0056b3;
+}
+
+/* Tạo khoảng cách giữa giỏ hàng trống và các thông báo */
+.alert.alert - danger {
+    margin - top: 20px;
+padding: 15px;
+    font - size: 16px;
+}
+
+    }
+}

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+}
+@model Project01.Models.ProductDetailViewModel
+        <div id="content" class="float_r">
+        	<h1>Product Detail</h1>
+            <div class="content_half float_l">
+        <a rel="lightbox[portfolio]" href="~/assets/images/product/@Model.Product.ImagePath"><img src="~/assets/images/product/@Model.Product.ImagePath" alt="@Model.Product.Name" /></a>
+            </div>
+            <div class="content_half float_r">
+                <table>
+                    <tr>
+                        <td width="160">Price:</td>
+                        <td>$@Model.Product.Price</td>
+                    </tr>
+                    <tr>
+                        <td>Availability:</td>
+                        <td>@Model.Product.Availability</td>
+                    </tr>
+                    <tr>
+                        <td>Model:</td>
+                        <td>@Model.Product.Model</td>
+                    </tr>
+                    <tr>
+                        <td>Manufacturer:</td>
+                        <td>@Model.Product.Manufacturer</td>
+                    </tr>
+                    <tr>
+                    	<td>Quantity</td>
+                        <td><input type="text" value="1" style="width: 20px; text-align: right" /></td>
+                    </tr>
+                </table>
+                <div class="cleaner h20"></div>
+        <a href="@Url.Action("AddToCart", "Product", new { productid = Model.Product.Id })" class="addtocart"></a>
+
+
+			</div>
+            <div class="cleaner h30"></div>
+            
+            <h5>Product Description</h5>
+            <p>@Html.Raw(Model.Product.Description)</p>
+
+    <div class="cleaner h50"></div>
+            
+            <h3>Related Products</h3>
+    @foreach (var relatedProduct in Model.RelatedProducts)
+    {
+            <div class="product_box">
+            <a href="@Url.Action("Detail", "Product", new { id = relatedProduct.Id })">
+                <img src = "~/assets/images/product/@relatedProduct.ImagePath" alt="@relatedProduct.Name" />
+            </a>
+                <h3>@relatedProduct.Name</h3>
+                <p class="product_price">$ @relatedProduct.Price</p>
+            <a href="@Url.Action("AddToCart", "Product", new { productid = @relatedProduct.Id })" class="addtocart"></a>
+            <a href="@Url.Action("Detail", "Product", new { id = relatedProduct.Id })" class="detail"></a>
+            </div>        	
+        }   
+        </div> 
+     
